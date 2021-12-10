@@ -10,10 +10,10 @@
           <ul>
             <li class="lottery-item" v-for="(list, index) in rollIdArr" :key="index">
               <div class="lottery-roll">
-                <div class="roll-item"><img :src="list.HeadImg"></div>
+<!--                <div class="roll-item"><img :src="list.HeadImg"></div>-->
                 <div class="roll-item"><span>{{list.Num}}</span></div>
-                <div class="roll-item"><span>{{list.Name}}</span></div>
-                <div class="roll-item"><span>{{list.Company}}</span></div>
+<!--                <div class="roll-item"><span>{{list.Name}}</span></div>-->
+<!--                <div class="roll-item"><span>{{list.Company}}</span></div>-->
               </div>
             </li>
           </ul>
@@ -21,15 +21,15 @@
       </div>
       <div class="lottery-btn">
         <div class="btn-func">
-          <button @click="beginRoll">开始</button>
+          <button @click="beginRoll">開始</button>
           <img v-if="style.year.show" :src="style.year.img">
           <button @click="stopRoll">抽取</button>
         </div>
       </div>
       <div class="lottery-options">
         <el-form>
-          <el-form-item label="本轮奖项">
-            <el-select @change="changeAward" v-model="maxAward" placeholder="请选择抽取奖项">
+          <el-form-item label="本輪獎項">
+            <el-select @change="changeAward" v-model="maxAward" placeholder="請選擇抽取獎項">
               <el-option
                 v-for="item in awardOptions"
                 :key="item.value"
@@ -40,8 +40,8 @@
               </el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="单次抽取">
-            <el-select @change="changeTimes" v-model="maxTimes" placeholder="请选择单次抽取人数">
+          <el-form-item label="單次抽取">
+            <el-select @change="changeTimes" v-model="maxTimes" placeholder="請選擇單次抽取人數">
               <el-option
                 v-for="item in timesOptions"
                 :key="item.value"
@@ -53,14 +53,14 @@
           </el-form-item>
         </el-form>
       </div>
-      <div class="lottery-prize">
-        <img src="../assets/images/kindle.png">
-        <p>Kindle 6英寸 电纸书(wifi)</p>
-      </div>
-      <div v-if="rule.show" class="lottery-rule">
-        <img :src="rule.img">
-        <div v-html="rule.html" class="lottery-txt"></div>
-      </div>
+<!--      <div class="lottery-prize">-->
+<!--        <img src="../assets/images/kindle.png">-->
+<!--        <p>Kindle 6英寸 电纸书(wifi)</p>-->
+<!--      </div>-->
+<!--      <div v-if="rule.show" class="lottery-rule">-->
+<!--        <img :src="rule.img">-->
+<!--        <div v-html="rule.html" class="lottery-txt"></div>-->
+<!--      </div>-->
       <div v-if="music.show" :class="classMusic" @click="toggleMusic">
         <div class="music-btn"></div>
         <audio loop="loop" preload="auto" ref="music">
@@ -107,7 +107,7 @@ export default {
       userData: [], // 总用户集合
       rollIdArr: [], // 当前抽中集合
       initial: false, // 是否加载数据完成
-      maxAwardTips: '请选择抽取奖项', // 本轮奖项名称
+      maxAwardTips: '請選擇抽取獎項', // 本轮奖项名称
       maxAward: '', // 本轮奖项类别
       maxNum: '', // 本轮奖项总人数
       rollLen: 0, // 本轮已抽中用户数
@@ -361,7 +361,7 @@ export default {
       if (val && val !== '99') {
         return `${val}人`
       } else {
-        return `自选`
+        return `自選`
       }
     }
   }
@@ -520,8 +520,8 @@ export default {
     }
     .lottery-music{
       position: absolute;
-      left: 2.5%;
-      top: 6.5%;
+      left: 3.5%;
+      top: 17.5%;
       cursor: pointer;
       .music-btn{
         width: 3em;

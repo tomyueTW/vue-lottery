@@ -29,12 +29,10 @@ for (let i = 1; i < 100; i++) {
 
 // 奖项类别
 const type = [
-  {value: '9', label: '特等奖', number: '3'},
-  {value: '1', label: '一等奖', number: '5'},
-  {value: '2', label: '二等奖', number: '12'},
-  {value: '3', label: '三等奖', number: '20'},
-  {value: '4', label: '参与奖', number: '28'},
-  {value: '5', label: '其他', number: ''}
+  {value: '1', label: '1獎', number: '1'},
+  {value: '2', label: '2獎', number: '2'},
+  {value: '3', label: '3獎', number: '3'},
+  {value: '4', label: '參加獎', number: '15'}
 ]
 
 // 校验登录状态,维持15分钟登录

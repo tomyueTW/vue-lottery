@@ -32,7 +32,7 @@ const config = {
       style: {
         // 主背景图
         bg: { // 在请求资源路径时，需要require
-          backgroundImage: `url(${require('../assets/images/background.png')})`,
+          backgroundImage: `url(${require('../assets/images/background.jpg')})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: '100% 100%'
         },
